@@ -1,5 +1,5 @@
 .btn {
-    background-image: linear-gradient(to right, #13ADC7,#6978D1, #945DD6);
+    background-image: linear-gradient(to right, red ,#6978D1, blue);
     border: none;
     padding: 12px;
     border-radius: 30px;
@@ -8,12 +8,16 @@
     cursor: pointer;
     font-size: 15px;
     width: 160px;
-    
+    transition: transform 0.5s;
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Define a posição inicial */
+    100% { transform: rotate(360deg); } /* Define a posição final */
+  }
 
 .btn:hover{
     color: aliceblue;
-    background-image: linear-gradient(to right, #945DD6,#6978D1,#13ADC7 );
-    transform: translateY(-7px);
-    transition-duration: 0.5s;
+    background-image: linear-gradient(to right, blue,#6978D1,red );
+    animation: spin 1s linear infinite;
 }
